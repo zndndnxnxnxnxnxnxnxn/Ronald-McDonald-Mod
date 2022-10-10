@@ -505,6 +505,43 @@ class Character extends FlxSprite
 				}
 
 				playAnim('idle');
+				
+				case 'ronald':
+				tex = Paths.getSparrowAtlas('characters/ronald');
+				frames = tex;
+				animation.addByPrefix('idle', 'monster idle', 24);
+				animation.addByPrefix('singUP', 'monster up note', 24);
+				animation.addByPrefix('singRIGHT', 'Monster Right note', 24);
+				animation.addByPrefix('singDOWN', 'monster down', 24);
+				animation.addByPrefix('singLEFT', 'Monster left note', 24);
+
+				addOffset('idle');
+				if (isPlayer)
+				{
+					addOffset("singUP", -14, 52);
+					addOffset("singRIGHT", -40, 12);
+					addOffset("singLEFT", 40, 30);
+					addOffset("singDOWN", 40, -30);
+					addOffset("singUPmiss", -10, 45);
+					addOffset("singLEFTmiss", -40, 10);
+					addOffset("singDOWNmiss", 41, -36);
+					addOffset("singRIGHTmiss", -35, 10);
+				}
+				else
+				{
+					addOffset("singUP", -6, 50);
+					addOffset("singRIGHT", 0, 27);
+					addOffset("singLEFT", -10, 10);
+					addOffset("singDOWN", 0, -30);
+					addOffset("singUPmiss", -10, 40);
+					addOffset("singLEFTmiss", 0, 10);
+					addOffset("singDOWNmiss", 11, -36);
+					addOffset("singRIGHTmiss", -10, 10);
+				}
+
+				playAnim('idle');				
+				
+				
 			case 'tankmannoamongus':
 				tex = Paths.getSparrowAtlas('characters/TankmanNoAmongUs');
 				frames = tex;
