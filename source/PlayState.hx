@@ -498,13 +498,26 @@ class PlayState extends MusicBeatState
 		                  var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('stages/limo/limoOverlay'));
 		                  overlayShit.alpha = 0.5;
 		                  // add(overlayShit);
+				  
+
 
 		                  // var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
 
 		                  // FlxG.camera.setFilters([new ShaderFilter(cast shaderBullshit.shader)]);
 
 		                  // overlayShit.shader = shaderBullshit;
-
+				  
+				  dodgepole = new FlxSprite(-800,-140).loadGraphic(Paths.image('limo/street_pole'));
+			dodgepole.antialiasing = true;
+			dodgepole.scrollFactor.set(0.3,0.3);
+			dodgepole.setGraphicSize(Std.int(dodgepole.width * 0.9));
+			dodgelamp = new FlxSprite(-800,-130).loadGraphic(Paths.image('limo/street_light'));
+			dodgelamp.antialiasing = true;
+			dodgelamp.scrollFactor.set(0.3,0.3);
+			dodgelamp.setGraphicSize(Std.int(dodgepole.width * 0.9));
+			
+			add(dodgepole);
+			
 		                  var limoTex = Paths.getSparrowAtlas('stages/limo/limoDrive');
 
 		                  limo = new FlxSprite(-120, 550);
