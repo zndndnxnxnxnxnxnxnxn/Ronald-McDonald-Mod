@@ -507,7 +507,7 @@ class PlayState extends MusicBeatState
 
 		                  // overlayShit.shader = shaderBullshit;
 				  
-				  dodgepole = new FlxSprite(-800,-140).loadGraphic(Paths.image('limo/street_pole'));
+				  dodgepole = new FlxSprite(-800,-140).loadGraphic(Paths.image('stages/limo/bgLimo'));
 			dodgepole.antialiasing = true;
 			dodgepole.scrollFactor.set(0.3,0.3);
 			dodgepole.setGraphicSize(Std.int(dodgepole.width * 0.9));
